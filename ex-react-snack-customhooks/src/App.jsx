@@ -1,6 +1,7 @@
 import useSwitch from "./hook/useSwitch"
 import useDate from "./hook/useDate"
 import useCustomPointer from "./hook/useCustomPointer";
+import useKeyPress from "./hook/useKeyPress"
 
 function App() {
   // snack 1
@@ -13,6 +14,7 @@ function App() {
   const mousePosition = useCustomPointer("🍧");
 
   // snack bonus 
+  const isPress = useKeyPress("Enter");
 
   return (
     <>
@@ -30,6 +32,11 @@ function App() {
       <div>
         <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
         {mousePosition}
+      </div>
+      {/* snack bonus  */}
+      <div>
+        <h1>Tieni premuto "Enter" per testare il custom hook</h1>
+        <p>{isPress ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
       </div>
     </>
   );
