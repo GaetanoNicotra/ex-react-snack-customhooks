@@ -12,6 +12,8 @@ function App() {
   // snack 3
   const mousePosition = useCustomPointer("🍧");
 
+  // snack bonus 
+
   return (
     <>
       {/* snack 1 */}
